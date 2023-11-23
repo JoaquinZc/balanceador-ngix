@@ -2,8 +2,7 @@ version: '3'
 
 services:
   web1:
-    build:
-      context: .
+    build: .
     ports:
       - "8081:80"
     networks:
@@ -12,8 +11,7 @@ services:
       - ./web1:/var/www/html:ro
 
   web2:
-    build:
-      context: .
+    build: .
     ports:
       - "8082:80"
     networks:

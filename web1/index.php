@@ -1,5 +1,5 @@
 <?php
-$servername = "127.0.0.1";
+$servername = "192.168.100.61";
 $username = "joaquin";
 $password = "hola123xD";
 $dbname = "dis";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Procesar el formulario para agregar una nueva nota
     if (isset($_POST["nueva_nota"]) && !empty($_POST["nueva_nota"])) {
-        $usuario = "nombre_de_usuario";  // Reemplaza con el usuario actual
+        $usuario = "joaquin";  // Reemplaza con el usuario actual
         $nuevaNota = $conn->real_escape_string($_POST["nueva_nota"]);
         $sql = "INSERT INTO notas (usuario, nota) VALUES ('$usuario', '$nuevaNota')";
 
